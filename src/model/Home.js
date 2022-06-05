@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
-
+import Counter from "./Counter";
+import CounterStore from "../store/CounterStore";
+const counterStore = new CounterStore()
 const Home = () => {
     return <div>
         <p>Home</p>
@@ -13,6 +15,7 @@ const Home = () => {
                 phone
             </button>
         </Link>
+        <Counter counterStore={counterStore} />
     </div>
 }
 export default Home
